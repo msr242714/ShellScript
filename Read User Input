@@ -1,0 +1,21 @@
+#!/bin/bash
+#read user input
+echo "enter your name:"
+read name
+echo "enter your name : $name"
+echo "enter your place:"
+read place
+echo "enter your place : $place"
+echo "enter your Profession:"
+read Occupation
+echo "enter your Profession : $Occupation"
+echo "enter your gender:"
+read gender
+echo "enter your gender : $gender"
+echo "enter your age:"
+read age
+echo "enter your age : $age"
+echo "enter your country:"
+read country
+echo "enter your country : $country"
+
