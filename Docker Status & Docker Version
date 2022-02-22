@@ -1,7 +1,7 @@
 #!/bin/bash
 now=$(date +"%d-%m-%y")
-DockerStatus=$(systemctl status docker | awk '/active/{print$3}' | tr -d '[()]')
-DockerVersion=$(docker -v | awk '{print$3}'| tr -d '[,]')
+DockerStatus=$(systemctl status docker | awk '/active/{print$3}' | tr -d '[()]')       // tr stands for translate,d which will deletes the specified filed in the [].In cour case it will delete right and left paranthisis()//
+DockerVersion=$(docker -v | awk '{print$3}'| tr -d '[,]')     
 echo "the docker status is: $DockerStatus"
 echo "the docker version is: $DockerVersion"
 echo "the date is: $now"
