@@ -1,0 +1,8 @@
+#!/bin/bash
+now=$(date +"%d-%m-%y")
+DockerStatus=$(systemctl status docker | awk '/active/{print$3}' | tr -d '[()]')
+DockerVersion=$(docker -v | awk '{print$3}'| tr -d '[,]')
+echo "the docker status is: $DockerStatus"
+echo "the docker version is: $DockerVersion"
+echo "the date is: $now"
+echo "Dockers Details" | mail -s "Docker status and Docker Version" reddymadhu.ch87@gmail.com -A success.txt
